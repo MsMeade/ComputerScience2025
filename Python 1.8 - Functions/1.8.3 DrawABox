@@ -1,0 +1,12 @@
+def drawABox():
+    print("**********")
+    print("*        *")
+    print("*        *")
+    print("*        *")
+    print("*        *")
+    print("**********")
+    
+    
+drawABox()
+drawABox()
+    

@@ -20,4 +20,5 @@ print(cent, "degrees C is", fhar, "degrees F")
 
 # Test kilometers to miles conversion
 kms = int(input("Enter a value in kilometers: "))
-print("%dkms = %.2fmiles" %(kms, kms2miles(kms)))
+miles = kms2miles(kms)
+print(kms, "kilometers is", miles, "miles")

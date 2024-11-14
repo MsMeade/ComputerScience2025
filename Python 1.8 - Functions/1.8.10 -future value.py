@@ -12,4 +12,4 @@ def future_value(principal, rate, time):
 # Driver Code
 fv_A = future_value(10000, 5, 10)
 fv_B = future_value(10000, 10, 5)
-print("Scenario A: %.2f \nScenario B: %.2f" %(fv_A, fv_B))
+print("Scenario A:", fv_A, " \nScenario B:", fv_B)

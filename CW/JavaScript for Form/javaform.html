@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Form</title>
+  <style>
+    .form-container {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Simple Form</h2>
+    <form id="userForm" onsubmit="return displayInfo()">
+      <label for="name">Name: </label>
+      <input type="text" id="name" name="name" required><br><br>
+
+      <label for="age">Age: </label>
+      <input type="number" id="age" name="age" required><br><br>
+
+      <label for="question">True or False: I like JavaScript?</label>
+      <select id="question" name="question">
+        <option value="true">True</option>
+        <option value="false">False</option>
+      </select><br><br>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <div class="result">
+    <h3>Your Information:</h3>
+    <textarea id="resultText" rows="4" cols="50" readonly></textarea>
+  </div>
+
+  <script>
+    function displayInfo() {
+      // Prevent form submission (page reload)
+      event.preventDefault();
+
+      // Get the values from the form
+      const name = document.getElementById('name').value;
+      const age = document.getElementById('age').value;
+      const questionAnswer = document.getElementById('question').value;
+
+      // Format the information to display
+      const resultText = `Name: ${name}\nAge: ${age}\nI like JavaScript: ${questionAnswer === 'true' ? 'Yes' : 'No'}`;
+
+      // Display the result in the textarea
+      document.getElementById('resultText').value = resultText;
+
+      return false; // Prevent page reload
+    }
+  </script>
+
+</body>
+</html>

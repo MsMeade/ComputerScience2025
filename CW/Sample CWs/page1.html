@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 10;
+            padding: 10;
+        }
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-align: center;
+            text-decoration: none;
+            float: left;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        main {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="page1.html">Form</a>
+        <a href="page2.html">Recommendations</a>
+    </nav>
+
+    <main>
+        <h1>Welcome to my Form </h1>
+        <p>This is Page 1 of your simple website.</p>
+		
+
+    </main>
+ <!--AR2 --> 
+
+  <div class="form-container">
+    <h2>Simple Form</h2>
+    <form id="userForm" onsubmit="return displayInfo()">
+      <label for="name">Name: </label>
+      <input type="text" id="name" name="name" required><br><br>
+
+      <label for="age">Age: </label>
+      <input type="number" id="age" name="age" required><br><br>
+
+      <label for="question">True or False: Did you find this website useful?</label>
+      <select id="question" name="question">
+        <option value="true">True</option>
+        <option value="false">False</option>
+      </select><br><br>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <div class="result">
+    <h3>Your Information:</h3>
+    <textarea id="resultText" rows="4" cols="50" readonly></textarea>
+  </div>
+
+  <script>
+    function displayInfo() {
+      // Prevent form submission (page reload)
+      event.preventDefault();
+
+      // Get the values from the form
+      const name = document.getElementById('name').value;
+      const age = document.getElementById('age').value;
+      const questionAnswer = document.getElementById('question').value;
+
+      // Format the information to display
+      const resultText = `Name: ${name}\nAge: ${age}\nDid you find this website useful?: ${questionAnswer === 'true' ? 'Yes' : 'No'}`;
+
+      // Display the result in the textarea
+      document.getElementById('resultText').value = resultText;
+
+      return false; // Prevent page reload
+    }
+  </script>
+  
+
+</body>
+</html>

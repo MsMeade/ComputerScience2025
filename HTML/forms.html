@@ -1,0 +1,119 @@
+<html>
+<head>
+
+<title> HTML Forms </title>
+</head>
+<body>
+
+<form>
+
+<!--This is how to add a text input-->
+<p> First Name: </p>
+<input type="text" placeholder="Please enter your name">
+<br>
+<br>
+
+<!-- Only allows numbers to be entered.-->
+<p> Enter your number of sibings </p>
+<input type="number" placeholder="Number of siblings">
+<br>
+<br>
+
+<!--Only allows dates to be entered. If a user clicks on the calendar icon, a date picker is displayed. -->
+<p> Enter your Date of Birth </p>
+<input type="date">
+<br>
+<br>
+
+<!--Only allows  Alphanumeric characters to be entered. Input is not visible for security reasons.-->
+<p> Please enter your password </p>
+<input type= "password" placeholder="Password">
+<br>
+<br>
+
+<!--Allows the user to select a colour.-->
+<p> Please select your favourite colour </p>
+<input type="color">
+<br>
+<br>
+
+<!--Allows the user to select from a range.-->
+<p> Please select how satisfied you are with this form </p>
+0
+<input type="range"  id="a" name="a" value="50">
+10
+<br>
+<br>
+
+<!--Allows the user to write into an expandable textbox.-->
+<p> Please add your comments into the box below </p>
+<textarea rows="10" cols="10"> </textarea>
+<br>
+<br>
+
+
+<!--Allows the user to select from a drop down.-->
+<p> Please select your favourite provence </p>
+<select>
+<option>
+Leinster
+<option>
+Munster
+<option>
+Ulster
+<option>
+Connaught
+</select>
+<br>
+<br>
+
+<!--Allows the user to select from a drop down -->
+<p> What vechciles do you own? </p>
+<input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+<label for="vehicle1"> I have a bike</label><br>
+<input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+<label for="vehicle2"> I have a car</label><br>
+<input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+<label for="vehicle3"> I have a boat</label>
+<br>
+<br>
+
+<!--Allows the user to select from a button list -->
+<p>Choose your favorite Web language:</p>
+<input type="radio" id="html" name="fav_language" value="HTML">
+<label for="html">HTML</label><br>
+<input type="radio" id="css" name="fav_language" value="CSS">
+<label for="css">CSS</label><br>
+<input type="radio" id="javascript" name="fav_language" value="JavaScript">
+<label for="javascript">JavaScript</label>
+<br>
+<br>
+
+<!--This is how to add a button-->
+<button> Press Me </button>
+<br>
+<br>
+
+<!-- click the button to show a pop-up -->
+<p> Click the button below for an alert.</p>
+<button type="button" onclick="alert('Hello World!')">Click Me!</button>
+<br>
+<br>
+
+
+<!--Small sample form -->
+<p> Enter your name below:</p>
+<label for="fname">First name:</label><br>
+<input type="text" id="fname" name="fname" value="John"><br>
+<label for="lname">Last name:</label><br>
+<input type="text" id="lname" name="lname" value="Doe"><br><br>
+<input type="submit" value="Submit">
+<br>
+<br>
+
+
+
+</form>
+
+</body>
+</html>
